@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration</title>
+</head>
+<body style="display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;">
+    <div class="container" style="width: 600px;
+                                  height: 550px;
+                                  text-align: center;
+                                  padding: 20px;
+                                  background-color: #fff;
+                                  border-radius: 5px;
+                                  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
+        <h2 style="font-size: 56px;
+                   font-family: serif;">
+            WindsorBlogger
+        </h2>
+
+        <h2 style="font-size: 36px;
+                   font-family: serif;">
+            Registration
+        </h2>
+        <form method="post">
+            <label for="username" style="font-size: 26px;
+                                         font-family: serif;">
+                Username:
+            </label>
+
+            <input type="text" id="username" name="username" required style="width: 150px;
+                                                                             padding: 10px;
+                                                                             margin: 10px 0;
+                                                                             border: 1px solid #ccc;
+                                                                             border-radius: 3px;"><br>
+
+            <label for="email" style="font-size: 26px;
+                                         font-family: serif;">
+                Email:
+            </label>
+            <input type="email" id="email" name="email" required style="width: 150px;
+                                                                             padding: 10px;
+                                                                             margin: 10px 0;
+                                                                             border: 1px solid #ccc;
+                                                                             border-radius: 3px;"><br>
+
+            <label for="password" style="font-size: 26px;
+                                         font-family: serif;">
+                Password:
+            </label>
+            <input type="password" id="password" name="password" required style="width: 150px;
+                                                                             padding: 10px;
+                                                                             margin: 10px 0;
+                                                                             border: 1px solid #ccc;
+                                                                             border-radius: 3px;"><br>
+
+            <label for="confirm-password" style="font-size: 26px;
+                                         font-family: serif;">
+                Confirm Password:
+            </label>
+            <input type="password" id="confirm-password" name="confirm-password" required style="width: 150px;
+                                                                             padding: 10px;
+                                                                             margin: 10px 0;
+                                                                             border: 1px solid #ccc;
+                                                                             border-radius: 3px;"><br><br>
+
+            <button type="submit" id="sub" style="width: 100px;
+                                         padding: 10px;
+                                         background-color: #007bff;
+                                         color: #fff;
+                                         border: none;
+                                         border-radius: 3px;
+                                         cursor: pointer;">
+                Register
+            </button>
+        </form>
+    </div>
+
+
+    <div id="registration-message"></div>
+
+   <script src = "registration.js" ></script>
+</body>
+</html>

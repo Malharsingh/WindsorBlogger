@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Blog Post</title>
+</head>
+<body style="display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button id="blog">Create Blog</button>
+        <button id="out" >Logout</button>
+    </nav>
+    <div class="container" style="width: 500px;
+                                  text-align: center;
+                                  padding: 20px;
+                                  background-color: #fff;
+                                  border-radius: 5px;
+                                  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);">
+        <h2 style="font-size: 32px;
+                   font-family: serif;">
+            Create Blog
+        </h2>
+        <form method="post" id="blog-post-form">
+            <label for="title" style="font-size: 20px;
+                                      font-family: serif;">
+                <b>Title:</b>
+            </label>
+            <br>
+            <input type="text" id="title" name="title" required style="width: 300px;
+                                                                     padding: 10px;
+                                                                     margin: 10px 0;
+                                                                     border: 1px solid #ccc;
+                                                                     border-radius: 3px;">
+            <br><br>
+            <label for="content" style="font-size: 20px;
+                                        font-family: serif;">
+                <b>Content:</b>
+            </label>
+            <br>
+            <textarea id="content" name="content" rows="6" required style="width: 300px;
+                                                                         padding: 10px;
+                                                                         margin: 10px 0;
+                                                                         border: 1px solid #ccc;
+                                                                         border-radius: 3px;"></textarea>
+            <br><br>
+            <label for="tags" style="font-size: 20px;
+                                     font-family: serif;">
+                <b>Tags (optional):</b>
+            </label>
+            <br>
+            <input type="text" id="tags" name="tags" style="width: 300px;
+                                                             padding: 10px;
+                                                             margin: 10px 0;
+                                                             border: 1px solid #ccc;
+                                                             border-radius: 3px;">
+            <br><br>
+            <button type="submit" id="sub" style="width: 100px;
+                                         padding: 10px;
+                                         background-color: #007bff;
+                                         color: #fff;
+                                         border: none;
+                                         border-radius: 3px;
+                                         cursor: pointer;">
+                Submit
+            </button>
+        </form>
+    </div>
+    <script src="blog.js"></script>
+</body>
+</html>
