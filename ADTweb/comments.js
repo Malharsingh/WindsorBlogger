@@ -9,7 +9,7 @@ const commentsList = document.getElementById("comments-list");
 
 local = sessionStorage.getItem("username");
 
-if(local == null){
+if (local == null) {
     window.location.replace("http://localhost:7000/index.html")
 }
 
@@ -50,16 +50,19 @@ fetch(`http://localhost:8000/comments`, {
                             <p class="mb-1"><small class="text-muted">Commented on: ${formattedCommentDate}</small></p>
                             <p class="mb-1">${comment.commenter_text}</p>
                         `;
-                    const deleteButton = document.createElement("button");
-                    // deleteButton.style.display = "none";
-                    deleteButton.classList.add("btn", "btn-sm", "position-absolute", "top-0", "end-0");
-                    deleteButton.innerHTML = '<i class="bi bi-x-lg text-danger"></i>';
+                    if (local === comment.commenter_name) {
+                        const deleteButton = document.createElement("button");
+                        // deleteButton.style.display = "none";
+                        deleteButton.classList.add("btn", "btn-sm", "position-absolute", "top-0", "end-0");
+                        deleteButton.innerHTML = '<i class="bi bi-x-lg text-danger"></i>';
 
-                    deleteButton.addEventListener("click", () => {
-                        deleteComment(comment['id']); // Implement the deleteComment function
-                    });
+                        deleteButton.addEventListener("click", () => {
+                            deleteComment(comment['id']); // Implement the deleteComment function
+                        });
+                        commentItem.appendChild(deleteButton);
+                    }
                     commentForm.style.display = "block";
-                    commentItem.appendChild(deleteButton);
+                    
                     commentsList.appendChild(commentItem);
                 } else {
                     commentForm.style.display = "block";

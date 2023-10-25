@@ -1,6 +1,5 @@
 import bcrypt
 
-
 def userEntity(item) -> dict:
     return {
         "id": str(item["_id"]),
@@ -8,7 +7,6 @@ def userEntity(item) -> dict:
         "email": item["email"],
         "password": item["password"],
     }
-
 
 def usersEntity(entity) -> list:
     print(entity)

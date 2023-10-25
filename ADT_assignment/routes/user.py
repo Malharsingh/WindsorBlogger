@@ -24,9 +24,12 @@ async def find_one_user(id):
 @user.post('/user')
 async def create_user(users: UserData):
     existing_user = conn.Blogdb.UserData.find_one({"username": users.username})
+    existing_email = conn.Blogdb.UserData.find_one({"email": users.email})
 
     if existing_user:
-        raise HTTPException(status_code=400, detail="Username is already taken");
+        raise HTTPException(status_code=400, detail="Username is already taken")
+    elif existing_email:
+        raise HTTPException(status_code=400, detail="Email is already taken")
     else:
         hashed_password = hash_password(users.password)
         user_data_dict = dict(users)

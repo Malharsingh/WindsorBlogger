@@ -5,21 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <style>
-        body {
+        <!-- body {
             display: flex;
             flex-direction: column;
             align-items: center;
             height: 100vh;
             margin: 0;
-        }
+        } -->
 
         .navbar {
+            
             display: flex;
             justify-content: space-between;
             background: #333;
             padding: 10px 20px;
             width: 100%;
+            
         }
 
         .container {
@@ -69,7 +73,7 @@
 
         /* Style for buttons */
         button {
-            width: 100%;
+            width: 10%;
             padding: 10px;
             background-color: #007bff;
             color: #fff;
@@ -81,7 +85,7 @@
         /* Style for form inputs */
         input[type="text"],
         textarea {
-            width: 100%;
+            width: 95%;
             padding: 10px;
             margin: 10px 0;
             border: 1px solid #ccc;
@@ -92,10 +96,15 @@
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <button id="blog">Create Blog</button>
+        <a href="home.html"><h1>WindsorBlogger</h1></a>
+        
         <button id="out">Logout</button>
     </nav>
     <div class="container">
+        <label for="tags-filter">Filter by Category:</label>
+            <select class="form-select mb-3" id="tags-filter">
+                <option value="All">All</option>
+        </select>
 
         <!-- Left Column (Blog Posts) -->
         <div class="column blog-container">

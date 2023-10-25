@@ -13,9 +13,9 @@ document.getElementById("sub").addEventListener("click", event => {
     const tags = document.getElementById("tags").value;
 
     const t = { title: title, content: content, author: { username: sessionStorage.getItem("username") }, tags: tags };
-    console.log(t);
-    // You can send a POST request to your FastAPI backend to handle the registration.
-    // Replace 'YOUR_BACKEND_URL' with the actual URL of your backend API.
+    console.log("this is from sub button",t);
+
+    
     fetch('http://localhost:8000/blog', {
         method: 'POST',
         headers: {

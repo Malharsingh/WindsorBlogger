@@ -12,4 +12,3 @@ class Comment(BaseModel):
     commenter_text: str
     creation_date: datetime = datetime.now()
     blog: Blog  # Reference to the user who created the post
-

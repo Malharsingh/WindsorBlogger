@@ -26,7 +26,12 @@ document.getElementById("sub").addEventListener("click", event => {
             // Redirect to a success page or perform other actions
             window.location.replace("http://localhost:7000/index.html");
         } else {
-            alert("Username already exist");
+            response.json().then(
+                json => {
+                    alert(json.detail);
+                } 
+                
+            )
             window.location.reload();
             return response.json(); // Parse the response JSON
         }

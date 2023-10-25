@@ -15,7 +15,7 @@ fake = Faker()
 # Function to create sample users
 def create_sample_users():
     users = []
-    for _ in range(5):  # Create 5 sample users
+    for _ in range(3):  # Create 5 sample users
         username = fake.user_name()
         email = fake.email()
         password = "password123"  # You can set a common password for all users or generate random ones
@@ -31,7 +31,7 @@ def create_sample_users():
 
 def create_sample_blog_posts():
     blog_posts = []
-    for _ in range(1):  # Create 5 sample blog posts
+    for _ in range(3):  # Create 5 sample blog posts
         title = fake.sentence()
         content = fake.paragraph()
 

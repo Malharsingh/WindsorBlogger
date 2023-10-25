@@ -1,5 +1,3 @@
-from typing import Optional, List
-
 from pydantic import BaseModel
 from datetime import datetime
 
@@ -12,4 +10,4 @@ class BlogPost(Blog):
     content: str
     author: User  # Reference to the user who created the post
     creation_date: datetime = datetime.now()
-    tag: Optional[List[str]] = None
+    tags: str
